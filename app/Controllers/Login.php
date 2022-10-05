@@ -14,7 +14,7 @@ class login extends BaseController
             'title' => 'Login | KELURAHAN BUARAN INDAH',
         ];
 
-        return view('lasman/login', $data);
+        return view('pagesUser/login', $data);
     }
 
     // proses login
@@ -26,6 +26,8 @@ class login extends BaseController
 
         // ambil data dari model
         $user = $this->AccountModel->getNik($nik);
+        $level = $this->AccountModel->getLevel($nik);
+        // dd($level);
         // logic login
         if ($nik == null || $password == null) {
             session()->setFlashdata('error', 'NIK atau password Tidak Boleh Kosong.');
@@ -35,10 +37,13 @@ class login extends BaseController
             session()->setFlashdata('error', 'NIK Tidak Terdaftar.');
             return redirect()->to('/login')->withInput();
         } else {
-            if ($password == $user['password']) {
+            if ($password == $user['password'] && $level['level'] == '1') {
                 session()->set('user', $user);
-                dd($user);
-                return redirect()->to('/dashboard');
+                return redirect()->to('/Dashboard');
+            }
+            if ($password == $user['password'] && $level['level'] == '2') {
+                session()->set('user', $user);
+                return redirect()->to('/DashboardAdmin');
             } else {
                 session()->setFlashdata('error', 'Password Salah.');
                 return redirect()->to('/login')->withInput();
@@ -55,7 +60,7 @@ class login extends BaseController
             'validation' => \config\Services::validation()
         ];
 
-        return view('lasman/register', $data);
+        return view('pagesUser/register', $data);
     }
 
     //login save
@@ -65,13 +70,12 @@ class login extends BaseController
         //validasi create account
         if (!$this->validate([
             'nik' => [
-                'rules' => 'required|is_unique[account.nik]|min_length[18]|max_length[18]',
+                'rules' => 'required|is_unique[account.nik]|min_length[16]|max_length[16]',
                 'errors' => [
                     'required' => 'NIK harus diisi.',
                     'is_unique' => 'NIK sudah terdaftar.',
                     'min_length' => 'NIK kurang dari 16 angka.',
                     'max_length' => 'NIK lebih dari 16 angka.',
-
                 ]
             ],
 
@@ -89,71 +93,17 @@ class login extends BaseController
                 ]
             ],
 
-            'id_jabatan' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Jabatan harus pilih.'
-                ]
-            ],
-
-            'jenis_kelamin' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Jenis Kelamin harus dipilih.',
-                ]
-            ],
-
-            'email' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Email harus diisi.'
-                ]
-            ],
-
-            'nomor_hp' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Nomor Hp harus diisi.'
-                ]
-            ],
-
-            'foto_profil' => [
-                'rules' => 'max_size[foto_profil,5120]|is_image[foto_profil]|mime_in[foto_profil,image/png,image/jpg,image/jpeg]',
-                'errors' => [
-                    'max_size' => 'Ukuran gambar terlalu besar',
-                    'is_image' => 'Yang anda pilih bukan gambar',
-                    'mine_in' => 'Yang anda pilih bukan gambar'
-                ]
-            ]
-
         ])) {
             // $validation = \config\Services::validation();
             return redirect()->to('/Login/register')->withInput();
-        }
-
-        // ambil file dari form input
-        $fileFoto = $this->request->getFile('foto_profil');
-        // jika user tidak ingin mggunakan foto profil
-        // maka foto profil menjadi foto default
-        if ($fileFoto->getError() == 4) {
-            $namaFoto = 'default.jpg';
-        } else {
-            // pindahkan file ke folder yang dituju
-            $fileFoto->move('img');
-            // ambil nama file
-            $namaFoto = $fileFoto->getName();
         }
 
         //proses save
         $this->AccountModel->save([
             'nik' => $this->request->getVar('nik'),
             'nama' => $this->request->getVar('nama'),
-            'id_jabatan' => $this->request->getVar('id_jabatan'),
             'password' => $this->request->getVar('password'),
-            'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
-            'email' => $this->request->getVar('email'),
-            'nomor_hp' => $this->request->getVar('nomor_hp'),
-            'foto_profil' => $namaFoto
+            'id_jabatan' => '1'
         ]);
 
         session()->setFlashdata('register', 'Data berhasil ditambahkan.');

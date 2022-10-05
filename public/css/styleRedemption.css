@@ -194,6 +194,13 @@ header .container {
     padding-bottom: 200px;
 }
 
+.daftarMasyarakat {
+    display: block;
+    max-width: 80%;
+    align-items: center;
+    justify-content: center;
+}
+
 .big-title {
     font-size: 1.4rem;
     color: var(--darkOne);

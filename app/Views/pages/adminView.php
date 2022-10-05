@@ -11,7 +11,7 @@
     <section class="content">
         <div class="card m-3">
             <div class="card-header">
-                <h2>Daftar Akun RT</h2>
+                <h2>Daftar Akun Masyarakat</h2>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -34,15 +34,14 @@
                     </div>
                 <?php endif; ?>
 
-                <a href="/admin/Add" class="btn btn-primary mb-3">Tambah Akun RT</a>
+                <a href="/admin/Add" class="btn btn-primary mb-3">Tambah Akun Masyarakat</a>
                 <table id="tableAdmin" class="table table-bordered table-striped table-hover">
                     <thead>
                         <tr>
                             <th scope="col">No.</th>
                             <th scope="col">NIK</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Jenis Kelamin</th>
-                            <th scope="col">Jabatan</th>
+                            <th scope="col">Nama Lengkap</th>
+                            <th scope="col">Password</th>
                             <th scope="col" class="text-center">Action</th>
                         </tr>
                     </thead>
@@ -54,19 +53,9 @@
 
                                 <td><?= $a['nik']; ?></td>
                                 <td><?= $a['nama']; ?></td>
-                                <td><?= $a['jenis_kelamin']; ?></td>
-                                <td><?= $a['nama_jabatan']; ?></td>
+                                <td><?= $a['password']; ?></td>
                                 <td class="text-center">
-                                    <!-- tombol jika menggunakan modal -->
-                                    <!-- <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailAccountModal">
-                                    Detail
-                                </button>
-                                <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editAccountModal">
-                                    Edit
-                                </button> -->
-
                                     <!-- tombol tanpa modal -->
-                                    <a href="/Admin/<?= $a['id_account']; ?>" class="btn btn-sm btn-success">Detail</a>
                                     <a href="/Admin/edit/<?= $a['id_account']; ?>" type="button" class="btn btn-sm btn-warning">Edit</a>
                                     <a href="/Admin/delete/<?= $a['id_account']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin?');">Delete</a>
                                 </td>
@@ -102,8 +91,8 @@
             "searching": true,
             "ordering": true,
             "info": true,
-            "responsive": false,
-            "scrollX": true,
+            "responsive": true,
+            "scrollX": false,
             //tambahan fitur tombol "colvis", "copy", "csv",
             // "buttons": ["excel", "pdf", "print"],
             // dom: "<'row'<'col-md-4'l><'col-md-4'B><'col-md-4'f>>" + "<'row'<'col-md-12'tr>>" + "<'row'<'col-md-5'i><'col-md-7'p>>"

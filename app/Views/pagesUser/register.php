@@ -15,7 +15,8 @@
 <body style="background-color:#e9ecef;">
     <div class="container">
         <div class="login">
-            <form action="/login/save" method="post" enctype="multipart/form-data">
+            <form action="/login/save" method="post">
+                <?= csrf_field(); ?>
                 <?php if (session()->getFlashdata('error')) : ?>
                     <div class="alert alert-danger" role="alert">
                         <?= session()->getFlashdata('error'); ?>

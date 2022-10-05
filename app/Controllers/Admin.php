@@ -15,24 +15,11 @@ class Admin extends BaseController
             'title' => 'Admin | KELURAHAN BUARAN INDAH',
             'SidebarMenuOpen' => 'admin',
             'SidebarMenuActive' => 'admin',
-            'account' => $this->AccountModel->getRT(),
+            'account' => $this->AccountModel->getUser(),
         ];
 
         $validation = \config\Services::validation();
         return view('pages/adminView', $data);
-    }
-
-    //method untuk melihat detail akun
-    public function detail($id_account)
-    {
-        $data = [
-            'title' => 'Detail Account | KELURAHAN BUARAN INDAH',
-            'SidebarMenuOpen' => 'admin',
-            'SidebarMenuActive' => 'admin',
-            'admin' => $this->AccountModel->getAdmin($id_account)
-        ];
-
-        return view('pages/accountDetail', $data);
     }
 
     //method untuk form tambah akun
@@ -61,7 +48,6 @@ class Admin extends BaseController
                     'is_unique' => 'NIK sudah terdaftar.',
                     'min_length' => 'NIK kurang dari 16 angka.',
                     'max_length' => 'NIK lebih dari 16 angka.',
-
                 ]
             ],
 
@@ -89,8 +75,8 @@ class Admin extends BaseController
         $this->AccountModel->save([
             'nik' => $this->request->getVar('nik'),
             'nama' => $this->request->getVar('nama'),
-            'id_jabatan' => '1',
-            'password' => $this->request->getVar('password')
+            'password' => $this->request->getVar('password'),
+            'id_jabatan' => '1'
         ]);
 
         session()->setFlashdata('tambahData', 'Data berhasil ditambahkan.');
@@ -126,13 +112,6 @@ class Admin extends BaseController
         //cek data yang dikirim oleh form
         // dd($this->request->getVar());
         if (!$this->validate([
-            // 'nik' => [
-            //     'rules' => $rule_nip,
-            //     'errors' => [
-            //         'required' => 'NIK harus diisi.'
-            //     ]
-            // ],
-
             'nama' => [
                 'rules' => 'required',
                 'errors' => [

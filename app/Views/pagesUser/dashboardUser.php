@@ -12,26 +12,47 @@
     <!-- css bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- css lasman -->
-    <link rel="stylesheet" href="/css/styleLasman.css" />
+    <!-- css Redemption -->
+    <link rel="stylesheet" href="/css/styleRedemption.css" />
 </head>
 
 <body>
 
     <main>
         <div class="big-wrapper light">
-            <img src="/aset/Responsive-Landing-Page-main/img/shape.png" alt="" class="shape" />
+            <img src="/img/shape.png" alt="" class="shape">
             <header>
                 <div class="container">
                     <div class="logo">
                         <h3>Kelurahan Buaran Indah</h3>
                     </div>
+
                     <div class="links">
                         <ul>
-                            <li><a href="/Home" class="active">Home</a></li>
-                            <li><a href="/Home/bantuan">Bantuan</a></li>
-                            <li><a href="/Login/register">Registrasi</a></li>
-                            <li><a href="/Login" class="btn">Log In</a></li>
+                            <li><a href="/Dashboard">Home</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="dashboardUser.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pengajuan
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="/SKGhaib">Surat Keterangan
+                                        Ghaib</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/SKOrangSama">Surat Keterangan
+                                        Orang Yang Sama</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/SKPindahPergi">Surat Keterangan
+                                        Pindah Pergi</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/SKTidakMampu">Surat Keterangan
+                                        Tidak Mampu</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/SKUsaha">Surat Keterangan
+                                        Usaha</a>
+                                </div>
+                            </li>
+                            <li><a href="/Dashboard/Pengajuan">Daftar Pengajuan</a></li>
+                            <li><a href="/Dashboard/bantuan">Bantuan</a></li>
+                            <li><a href="/login/logout" class="btn">Log Out</a></li>
                         </ul>
                     </div>
                     <div class="overlay"></div>
@@ -40,6 +61,16 @@
                     </div>
                 </div>
             </header>
+            <div class="container">
+                <?php if (session()->getFlashdata('tambahData')) : ?>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <?= session()->getFlashdata('tambahData'); ?>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <?php endif; ?>
+            </div>
             <div class="showcase-area">
                 <div class="container">
                     <div class="left">
@@ -70,10 +101,6 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script>
         function previewLabel() {

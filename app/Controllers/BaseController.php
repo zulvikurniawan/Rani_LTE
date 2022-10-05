@@ -12,7 +12,7 @@ use Psr\Log\LoggerInterface;
 //jika memakai BaseController namespase berada di sini
 use \App\Models\AccountModel;
 use \App\Models\JabatanModel;
-use \App\Models\MasyarakatModel;
+use \App\Models\ghaibModel;
 
 
 /**
@@ -57,6 +57,6 @@ class BaseController extends Controller
         session();
         $this->AccountModel = new AccountModel();
         $this->JabatanModel = new JabatanModel();
-        $this->MasyarakatModel = new MasyarakatModel();
+        $this->ghaibModel = new ghaibModel();
     }
 }

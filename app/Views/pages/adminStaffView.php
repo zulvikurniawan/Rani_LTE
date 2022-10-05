@@ -34,15 +34,14 @@
                     </div>
                 <?php endif; ?>
 
-                <a href="/AdminStaff/add" class="btn btn-primary mb-3 ml-3">Tambah Akun Staff Kecamatan</a>
+                <a href="/AdminStaff/Add" class="btn btn-primary mb-3">Tambah Akun Staff</a>
                 <table id="tableAdmin" class="table table-bordered table-striped table-hover">
                     <thead>
                         <tr>
                             <th scope="col">No.</th>
-                            <th scope="col">NIP</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Jenis Kelamin</th>
-                            <th scope="col">Jabatan</th>
+                            <th scope="col">NIK</th>
+                            <th scope="col">Nama Lengkap</th>
+                            <th scope="col">Password</th>
                             <th scope="col" class="text-center">Action</th>
                         </tr>
                     </thead>
@@ -54,19 +53,9 @@
 
                                 <td><?= $a['nik']; ?></td>
                                 <td><?= $a['nama']; ?></td>
-                                <td><?= $a['jenis_kelamin']; ?></td>
-                                <td><?= $a['nama_jabatan']; ?></td>
+                                <td><?= $a['password']; ?></td>
                                 <td class="text-center">
-                                    <!-- tombol jika menggunakan modal -->
-                                    <!-- <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailAccountModal">
-                                    Detail
-                                </button>
-                                <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editAccountModal">
-                                    Edit
-                                </button> -->
-
                                     <!-- tombol tanpa modal -->
-                                    <a href="/AdminStaff/<?= $a['id_account']; ?>" class="btn btn-sm btn-success">Detail</a>
                                     <a href="/AdminStaff/edit/<?= $a['id_account']; ?>" type="button" class="btn btn-sm btn-warning">Edit</a>
                                     <a href="/AdminStaff/delete/<?= $a['id_account']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin?');">Delete</a>
                                 </td>
@@ -102,8 +91,8 @@
             "searching": true,
             "ordering": true,
             "info": true,
-            "responsive": false,
-            "scrollX": true,
+            "responsive": true,
+            "scrollX": false,
             //tambahan fitur tombol "colvis", "copy", "csv",
             // "buttons": ["excel", "pdf", "print"],
             // dom: "<'row'<'col-md-4'l><'col-md-4'B><'col-md-4'f>>" + "<'row'<'col-md-12'tr>>" + "<'row'<'col-md-5'i><'col-md-7'p>>"

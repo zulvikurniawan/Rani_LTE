@@ -14,7 +14,7 @@ class AccountModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['nik', 'nama', 'password'];
+    protected $allowedFields = ['nik', 'nama', 'password', 'id_jabatan'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';
@@ -40,13 +40,28 @@ class AccountModel extends Model
             ->first();
     }
 
-    public function getStaff($id_account = false)
+    public function getUser($id_account = false)
     {
         if ($id_account == false) {
             return $this
                 ->select('account.*,nama_jabatan')
                 ->join('jabatan as j', 'j.id_jabatan = account.id_jabatan')
                 ->where(['j.level' => '1'])
+                ->findAll();
+        }
+        return $this
+            ->select('account.*,nama_jabatan')
+            ->join('jabatan as j', 'j.id_jabatan = account.id_jabatan')
+            ->where(['id_account' => $id_account, 'j.level' => '1'])
+            ->first();
+    }
+    public function getStaff($id_account = false)
+    {
+        if ($id_account == false) {
+            return $this
+                ->select('account.*,nama_jabatan')
+                ->join('jabatan as j', 'j.id_jabatan = account.id_jabatan')
+                ->where(['j.level' => '2'])
                 ->findAll();
         }
         return $this
@@ -63,6 +78,18 @@ class AccountModel extends Model
         }
         return $this
             ->select('account.*,nama_jabatan')
+            ->join('jabatan as j', 'j.id_jabatan = account.id_jabatan')
+            ->where(['nik' => $nik])
+            ->first();
+    }
+
+    public function getLevel($nik)
+    {
+        if ($nik == false) {
+            return session()->setFlashdata('error', 'NIK Tidak Boleh Kosong.');
+        }
+        return $this
+            ->select('level')
             ->join('jabatan as j', 'j.id_jabatan = account.id_jabatan')
             ->where(['nik' => $nik])
             ->first();

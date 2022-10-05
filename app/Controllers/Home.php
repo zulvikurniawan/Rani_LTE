@@ -15,7 +15,7 @@ class Home extends BaseController
             'title' => 'Home | KELURAHAN BUARAN INDAH',
         ];
 
-        return view('lasman/home', $data);
+        return view('pagesUser/home', $data);
     }
 
     public function bantuan()
@@ -24,6 +24,6 @@ class Home extends BaseController
             'title' => 'Bantuan | KELURAHAN BUARAN INDAH',
         ];
 
-        return view('lasman/bantuan', $data);
+        return view('pagesUser/homeBantuan', $data);
     }
 }

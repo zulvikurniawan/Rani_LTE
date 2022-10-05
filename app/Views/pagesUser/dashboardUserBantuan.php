@@ -12,50 +12,49 @@
     <!-- css bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- css lasman -->
-    <link rel="stylesheet" href="/css/styleLasman.css" />
+    <!-- css Redemption -->
+    <link rel="stylesheet" href="/css/styleRedemption.css" />
 </head>
 
 <body>
 
     <main>
         <div class="big-wrapper light">
-            <img src="/aset/Responsive-Landing-Page-main/img/shape.png" alt="" class="shape" />
+            <img src="/img/shape.png" alt="" class="shape">
             <header>
                 <div class="container">
                     <div class="logo">
                         <h3>Kelurahan Buaran Indah</h3>
                     </div>
-
                     <div class="links">
                         <ul>
-                            <li><a href="/DashboardUser">Home</a></li>
+                            <li><a href="/Dashboard">Home</a></li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="dashboardUser.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pengajuan
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="/PengajuanSuratketeranganUsaha">Surat Keterangan
-                                        Usaha</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="/PengajuanSuratKeteranganTidakMampu">Surat Keterangan
-                                        Tidak Mampu</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="/PengajuanSuratKeteranganGhaib">Surat Keterangan
+                                    <a class="dropdown-item" href="/SKGhaib">Surat Keterangan
                                         Ghaib</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="/PengajuanSuratKeteranganPindahPergi">Surat Keterangan
+                                    <a class="dropdown-item" href="/SKOrangSama">Surat Keterangan
+                                        Orang Yang Sama</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/SKPindahPergi">Surat Keterangan
                                         Pindah Pergi</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="/PengajuanSuratKeteranganOrangYangSama">Surat Keterangan
-                                        Orang Yang Sama</a>
+                                    <a class="dropdown-item" href="/SKTidakMampu">Surat Keterangan
+                                        Tidak Mampu</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/SKUsaha">Surat Keterangan
+                                        Usaha</a>
+                                </div>
                             </li>
-                            <li><a href="/BantuanUser">Bantuan</a></li>
+                            <li><a href="/Dashboard/Pengajuan">Daftar Pengajuan</a></li>
+                            <li><a href="/Dashboard/bantuan">Bantuan</a></li>
                             <li><a href="/login/logout" class="btn">Log Out</a></li>
                         </ul>
                     </div>
-
                     <div class="overlay"></div>
-
                     <div class="hamburger-menu">
                         <div class="bar"></div>
                     </div>
@@ -69,8 +68,8 @@
                             <h1>Tangerang.</h1>
                         </div>
                         <p class="text">
-                            Buaran Indah adalah kelurahan yang berada di kecamatan Tangerang, Kota Tangerang, Banten,
-                            Indonesia. Kelurahan ini terdiri atas 52 rukun tetangga dan 9 rukun warga.
+                            <li>Alamat : Jl. Prof. Dr. Soepomo, Tangerang, 15119</li>
+                            <li>No. Telp : (021) 5531161</li>
                         </p>
                     </div>
                     <div class="right" style="padding-right: 100px; margin-bottom: 20px;">

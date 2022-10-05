@@ -2,93 +2,38 @@
 
 namespace App\Controllers;
 
-use App\Models\MasyarakatModel;
+// jika memakai contsruct
+// use App\Models\AccountModel;
 
 class Dashboard extends BaseController
 {
-
-    protected $MasyarakatModel;
+    protected $AccountModel;
 
     public function index()
     {
-        // $summary =  $this->MasyarakatModel->getDashboard();
-        // $totalData = 0;
-        // foreach ($summary as $s) {
-        //     $totalData += $s['total'];
-        // }
         $data = [
-            'title' => 'Dashboard | KELURAHAN BUARAN INDAH',
-            // 'SidebarMenuOpen' => 'dashboard',
-            // 'SidebarMenuActive' => 'dashboard',
-            // 'summary' => $summary,
-            // 'total' => $totalData
+            'title' => 'Home | KELURAHAN BUARAN INDAH',
         ];
 
-        // dd($data['summary']['0']);
-
-
-        return view('lasman/dashboardUser', $data);
-    }
-
-    public function Admin()
-    {
-        // $summary =  $this->MasyarakatModel->getDashboard();
-        // $totalData = 0;
-        // foreach ($summary as $s) {
-        //     $totalData += $s['total'];
-        // }
-        $data = [
-            'title' => 'Dashboard | KELURAHAN BUARAN INDAH',
-            // 'SidebarMenuOpen' => 'dashboard',
-            // 'SidebarMenuActive' => 'dashboard',
-            // 'summary' => $summary,
-            // 'total' => $totalData
-        ];
-
-        // dd($data['summary']['0']);
-
-
-        return view('lasman/dashboardAdminLasman', $data);
+        return view('pagesUser/dashboardUser', $data);
     }
 
     public function pengajuan()
     {
-        $summary =  $this->MasyarakatModel->getDashboard();
-        $totalData = 0;
-        foreach ($summary as $s) {
-            $totalData += $s['total'];
-        }
         $data = [
-            'title' => 'Dashboard | KELURAHAN BUARAN INDAH',
-            'SidebarMenuOpen' => 'dashboard',
-            'SidebarMenuActive' => 'dashboard',
-            'summary' => $summary,
-            'total' => $totalData
+            'title' => 'Daftar Pengajuan | KELURAHAN BUARAN INDAH',
+            'account' => $this->AccountModel->getUser(),
         ];
 
-        // dd($data['summary']['0']);
-
-
-        return view('lasman/pengajuanAdminLasman', $data);
+        return view('pagesUser/dashboardUserPengajuan', $data);
     }
-    public function dataAdmin()
+
+    public function bantuan()
     {
-        $summary =  $this->MasyarakatModel->getDashboard();
-        $totalData = 0;
-        foreach ($summary as $s) {
-            $totalData += $s['total'];
-        }
         $data = [
-            'title' => 'Dashboard | KELURAHAN BUARAN INDAH',
-            'SidebarMenuOpen' => 'dashboard',
-            'SidebarMenuActive' => 'dashboard',
-            'summary' => $summary,
-            'total' => $totalData
+            'title' => 'Bantuan | KELURAHAN BUARAN INDAH',
         ];
 
-        // dd($data['summary']['0']);
-
-
-        return view('lasman/kelolaDataAdmin', $data);
+        return view('pagesUser/dashboardUserBantuan', $data);
     }
 }
