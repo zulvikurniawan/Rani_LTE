@@ -16,7 +16,7 @@ class SKGhaib extends BaseController
 
     public function save()
     {
-        // dd($this->request->getVar());
+        // dd($this->request->getFile('kk'));
         if (!$this->validate([
             'nama_Lengkap' => [
                 'rules' => 'required',
@@ -85,25 +85,23 @@ class SKGhaib extends BaseController
                 ],
             ]
         ])) {
-            // $validation = \config\Services::validation();
-            // return redirect()->to('/PengajuanSuratKeteranganGhaib/index')->withInput()->with('validation', $validation);
-            return redirect()->to('/SKGhaib')->withInput();
+            return redirect()->to('/SKGhaib/index')->withInput();
         }
 
         $filespRT = $this->request->getFile('spRT');
-        $filespRT->move('img');
+        $filespRT->move('file');
         $namaspRT = $filespRT->getName();
 
         $filektp = $this->request->getFile('ktp');
-        $filektp->move('img');
+        $filektp->move('file');
         $namaktp = $filektp->getName();
 
         $filekk = $this->request->getFile('kk');
-        $filekk->move('img');
+        $filekk->move('file');
         $namakk = $filekk->getName();
 
-        // proses save
-        $this->GhaibModel->save([
+
+        $this->ghaibModel->save([
             'nama_Lengkap' => $this->request->getVar('nama_Lengkap'),
             'tempat_Lahir' => $this->request->getVar('tempat_Lahir'),
             'tanggal_Lahir' => $this->request->getVar('tanggal_Lahir'),
@@ -113,7 +111,7 @@ class SKGhaib extends BaseController
             'alamat' => $this->request->getVar('alamat'),
             'status' => $this->request->getVar('status'),
             'agama' => $this->request->getVar('agama'),
-            'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
+            'jenis_kelamin' => $this->request->getVar('status'),
             'spRT' => $namaspRT,
             'ktp' => $namaktp,
             'kk' => $namakk

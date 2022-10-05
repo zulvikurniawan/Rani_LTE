@@ -13,6 +13,9 @@ use Psr\Log\LoggerInterface;
 use \App\Models\AccountModel;
 use \App\Models\JabatanModel;
 use \App\Models\ghaibModel;
+use \App\Models\OrangSamaModel;
+use \App\Models\PindahPergiModel;
+use \App\Models\TidakMampuModel;
 
 
 /**
@@ -58,5 +61,8 @@ class BaseController extends Controller
         $this->AccountModel = new AccountModel();
         $this->JabatanModel = new JabatanModel();
         $this->ghaibModel = new ghaibModel();
+        $this->OrangSamaModel = new OrangSamaModel();
+        $this->PindahPergiModel = new PindahPergiModel();
+        $this->TidakMampuModel = new TidakMampuModel();
     }
 }

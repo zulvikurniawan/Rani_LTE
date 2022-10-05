@@ -1,1 +1,0 @@
-__ci_last_regenerate|i:1664728145;_ci_previous_url|s:27:"http://localhost:8080/login";error|s:20:"NIK Tidak Terdaftar.";__ci_vars|a:2:{s:5:"error";s:3:"old";s:13:"_ci_old_input";s:3:"old";}_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:2:{s:3:"nik";s:16:"1212121212121212";s:8:"password";s:4:"1234";}}

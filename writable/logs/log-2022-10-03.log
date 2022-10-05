@@ -1,0 +1,80 @@
+ERROR - 2022-10-03 13:19:29 --> Column 'id_jabatan' in field list is ambiguous
+CRITICAL - 2022-10-03 13:19:29 --> Column 'id_jabatan' in field list is ambiguous
+#0 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `account...', 0)
+#1 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `account...')
+#2 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `account...')
+#3 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `account...', Array, false)
+#4 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\XIANGLU\Desktop\Rani_LTE\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Models\AccountModel.php(80): CodeIgniter\BaseModel->first()
+#7 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Controllers\Login.php(29): App\Models\AccountModel->getLevel('111111111111111...')
+#8 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(832): App\Controllers\login->proses()
+#9 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+#10 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
+#13 {main}
+CRITICAL - 2022-10-03 13:29:00 --> Undefined offset: 1
+#0 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Controllers\Login.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\Users\\XIANGL...', 41, Array)
+#1 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(832): App\Controllers\login->proses()
+#2 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+#3 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
+#6 {main}
+CRITICAL - 2022-10-03 13:43:45 --> Undefined offset: 1
+#0 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Controllers\Login.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\Users\\XIANGL...', 41, Array)
+#1 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(832): App\Controllers\login->proses()
+#2 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+#3 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
+#6 {main}
+CRITICAL - 2022-10-03 13:44:04 --> Undefined offset: 1
+#0 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Controllers\Login.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\Users\\XIANGL...', 41, Array)
+#1 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(832): App\Controllers\login->proses()
+#2 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+#3 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
+#6 {main}
+CRITICAL - 2022-10-03 13:44:08 --> Undefined offset: 1
+#0 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Controllers\Login.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\Users\\XIANGL...', 41, Array)
+#1 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(832): App\Controllers\login->proses()
+#2 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+#3 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
+#6 {main}
+CRITICAL - 2022-10-03 13:55:48 --> Undefined variable: level
+#0 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Controllers\Login.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\XIANGL...', 29, Array)
+#1 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(832): App\Controllers\login->proses()
+#2 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+#3 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
+#6 {main}
+CRITICAL - 2022-10-03 13:56:05 --> Too few arguments to function App\Models\AccountModel::getLevel(), 0 passed in C:\Users\XIANGLU\Desktop\Rani_LTE\app\Controllers\Login.php on line 29 and exactly 1 expected
+#0 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Controllers\Login.php(29): App\Models\AccountModel->getLevel()
+#1 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(832): App\Controllers\login->proses()
+#2 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login))
+#3 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
+#6 {main}
+ERROR - 2022-10-03 14:26:47 --> Table 'db_rani.masyarakat' doesn't exist
+CRITICAL - 2022-10-03 14:26:47 --> Table 'db_rani.masyarakat' doesn't exist
+#0 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT count(ni...', 0)
+#1 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT count(ni...')
+#2 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT count(ni...')
+#3 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT count(ni...', Array, false)
+#4 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\XIANGLU\Desktop\Rani_LTE\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Models\MasyarakatModel.php(51): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Controllers\Dashboard.php(56): App\Models\MasyarakatModel->getDashboard()
+#8 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(832): App\Controllers\Dashboard->pengajuan()
+#9 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#10 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
+#13 {main}

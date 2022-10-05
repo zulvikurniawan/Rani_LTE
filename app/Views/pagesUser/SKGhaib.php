@@ -153,27 +153,27 @@
                         </div>
                         <div class="group-listt">
                             <div class="form-check">
-                                <input type="radio" name="agama" class="form-check-input" id="agama" value="Kristen">
-                                <label for="kristen" class="form-check-label">Kristen</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" name="agama" class="form-check-input" id="agama" value="Katolik">
-                                <label for="katolik" class="form-check-label">Katolik</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" name="agama" class="form-check-input" id="agama" value="Islam">
+                                <input type="radio" name="agama" class="form-check-input" id="agama" required value="Islam">
                                 <label for="islam" class="form-check-label">Islam</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" name="agama" class="form-check-input" id="agama" value="Hindu">
+                                <input type="radio" name="agama" class="form-check-input" id="agama" required value="Kristen">
+                                <label for="kristen" class="form-check-label">Kristen</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" name="agama" class="form-check-input" id="agama" required value="Katolik">
+                                <label for="katolik" class="form-check-label">Katolik</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" name="agama" class="form-check-input" id="agama" required value="Hindu">
                                 <label for="hindu" class="form-check-label">Hindu</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" name="agama" class="form-check-input" id="agama" value="Budha">
+                                <input type="radio" name="agama" class="form-check-input" id="agama" required value="Budha">
                                 <label for="budha" class="form-check-label">Budha</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" name="agama" class="form-check-input" id="agama" value="Konghucu">
+                                <input type="radio" name="agama" class="form-check-input" id="agama" required value="Konghucu">
                                 <label for="konghucu" class="form-check-label">Konghucu</label>
                             </div>
                         </div>
@@ -185,11 +185,11 @@
                         </div>
                         <div class="group-list">
                             <div class="form-check">
-                                <input type="radio" name="jenis_kelamin" value="Laki-laki" class="form-check-input" id="laki">
+                                <input type="radio" name="jenis_kelamin" value="Laki-laki" class="form-check-input" required id="laki">
                                 <label for="laki" class="form-check-label">Laki-laki</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" name="jenis_kelamin" value="Perempuan" class="form-check-input" id="perempuan">
+                                <input type="radio" name="jenis_kelamin" value="Perempuan" class="form-check-input" required id="perempuan">
                                 <label for="perempuan" class="form-check-label">Perempuan</label>
                             </div>
                         </div>
@@ -230,7 +230,6 @@
                             <label class="custom-file-label kk" for="kk">Pilih File...</label>
                         </div>
                     </div>
-
                     <button type="submit" class="btn">Kirim</button>
                 </form>
             </div>
@@ -243,6 +242,68 @@
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+            <script>
+                function previewLabel() {
+                    const spRTLabel = document.querySelector('.spRT')
+
+                    console.log('test');
+                    spRTLabel.textContent = spRT.files[0].name;
+                }
+            </script>
+            <script>
+                function previewLabel1() {
+                    const ktpLabel = document.querySelector('.ktp')
+
+                    console.log('test');
+                    ktpLabel.textContent = ktp.files[0].name;
+                }
+            </script>
+
+            <script>
+                function previewLabel2() {
+                    const kkLabel = document.querySelector('.kk')
+
+                    console.log('test');
+                    kkLabel.textContent = kk.files[0].name;
+                }
+            </script>
+
+            <script>
+                function previewLabel3() {
+                    const dokumen_bersangkutanLabel = document.querySelector('.dokumen_bersangkutan')
+
+                    console.log('test');
+                    dokumen_bersangkutanLabel.textContent = dokumen_bersangkutan.files[0].name;
+                }
+            </script>
+
+            <script>
+                function previewLabel4() {
+                    const ijin_tinggalLabel = document.querySelector('.ijin_tinggal')
+
+                    console.log('test');
+                    ijin_tinggalLabel.textContent = ijin_tinggal.files[0].name;
+                }
+            </script>
+
+            <script>
+                function previewLabel5() {
+                    const rincian_biayaLabel = document.querySelector('.rincian_biaya')
+
+                    console.log('test');
+                    rincian_biayaLabel.textContent = rincian_biaya.files[0].name;
+                }
+            </script>
+
+            <script>
+                function previewLabel6() {
+                    const fotoUsahaLabel = document.querySelector('.fotoUsaha')
+
+                    console.log('test');
+                    fotoUsahaLabel.textContent = fotoUsaha.files[0].name;
+                }
+            </script>
 </body>
 
 </html>
