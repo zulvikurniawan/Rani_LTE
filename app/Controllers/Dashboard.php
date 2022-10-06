@@ -22,7 +22,7 @@ class Dashboard extends BaseController
     {
         $data = [
             'title' => 'Daftar Pengajuan | KELURAHAN BUARAN INDAH',
-            'account' => $this->AccountModel->getUser(),
+            'pengajuan' => $this->PengajuanModel->getPengajuan(),
         ];
 
         return view('pagesUser/dashboardUserPengajuan', $data);

@@ -65,10 +65,17 @@
       </header>
 
       <div class="form">
+        <?php if (session()->getflashdata('pesan')) : ?>
+          <div class="alert alert-info" role="alert">
+            <?= session()->getFlashdata('pesan'); ?>
+          </div>
+        <?php endif; ?>
+
         <a class="btn" href="/Dashboard">Kembali</a>
         <div class="title">Surat Keterangan Usaha</div>
-        <form action="/SKOrangSama/save" method="POST" enctype="multipart/form-data">
+        <form action="/SKUsaha/save" method="POST" enctype="multipart/form-data">
           <?= csrf_field(); ?>
+
           <div class="user-details">
             <div class="input-box">
               <span class="details">Nama Lengkap</span>
@@ -86,7 +93,6 @@
                 <?= $validation->getError('tempat_Lahir'); ?>
               </div>
             </div>
-
             <div class="input-box">
               <span class="details">Tanggal Lahir</span>
               <input type="date" id="tanggal_Lahir" name="tanggal_Lahir" class="form-control
@@ -183,8 +189,8 @@
           <hr style="margin-top: 50px;height: 20px;border-width: 1px;">
           <div class="title">Kelengkapan Form</div>
           <div class="input-box" style="margin-bottom: 15px;">
-            <span class="details" style="display: block; font-weight: 500; margin-bottom: 5px; padding-top: 20px;">Surat Pengantar
-              RT/RW</span>
+            <span class="details" style="display: block; font-weight: 500; margin-bottom: 5px; padding-top: 20px;">Surat
+              Keterangan RT/RW</span>
             <div class="custom-file" onchange="previewLabel()">
               <input type="file" class="custom-file-input <?= ($validation->hasError('spRT')) ? 'is-invalid' : ''; ?>" id="spRT" name="spRT">
               <div class="invalid-feedback">
@@ -195,7 +201,8 @@
           </div>
 
           <div class="input-box" style="margin-bottom: 15px;">
-            <span class="details" style="display: block; font-weight: 500; margin-bottom: 5px; padding-top: 20px;">Foto KTP</span>
+            <span class="details" style="display: block; font-weight: 500; margin-bottom: 5px; padding-top: 20px;">Foto KTP
+              Pemilik Usaha</span>
             <div class="custom-file" onchange="previewLabel1()">
               <input type="file" class="custom-file-input <?= ($validation->hasError('ktp')) ? 'is-invalid' : ''; ?>" id="ktp" name="ktp">
               <div class="invalid-feedback">
@@ -206,7 +213,8 @@
           </div>
 
           <div class="input-box" style="margin-bottom: 15px;">
-            <span class="details" style="display: block; font-weight: 500; margin-bottom: 5px; padding-top: 20px;">Foto KK</span>
+            <span class="details" style="display: block; font-weight: 500; margin-bottom: 5px; padding-top: 20px;">Foto KK Pemilik
+              Usaha</span>
             <div class="custom-file" onchange="previewLabel2()">
               <input type="file" class="custom-file-input <?= ($validation->hasError('kk')) ? 'is-invalid' : ''; ?>" id="kk" name="kk">
               <div class="invalid-feedback">
@@ -216,16 +224,14 @@
             </div>
           </div>
 
-          <div class="input-box" style="margin-bottom: 15px;">
-            <span class="details" style="display: block; font-weight: 500; margin-bottom: 5px; padding-top: 20px;">Dokumen
-              Yang
-              Bersangkutan</span>
-            <div class="custom-file" onchange="previewLabel3()">
-              <input type="file" class="custom-file-input <?= ($validation->hasError('dokumen_bersangkutan')) ? 'is-invalid' : ''; ?>" id="dokumen_bersangkutan" name="dokumen_bersangkutan">
+          <div class=" input-box" style="margin-bottom: 15px;">
+            <span class="details" style="display: block; font-weight: 500; margin-bottom: 5px; padding-top: 20px;">Foto Usaha</span>
+            <div class="custom-file" onchange="previewLabel6()">
+              <input type="file" class="custom-file-input <?= ($validation->hasError('fotoUsaha')) ? 'is-invalid' : ''; ?>" id="fotoUsaha" name="fotoUsaha">
               <div class="invalid-feedback">
-                <?= $validation->getError('dokumen_bersangkutan'); ?>
+                <?= $validation->getError('fotoUsaha'); ?>
               </div>
-              <label class="custom-file-label dokumen_bersangkutan" for="dokumen_bersangkutan">Pilih File...</label>
+              <label class="custom-file-label fotoUsaha" for="fotoUsaha">Pilih File...</label>
             </div>
           </div>
           <button type="submit" class="btn">Kirim</button>

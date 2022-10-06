@@ -16,6 +16,8 @@ use \App\Models\ghaibModel;
 use \App\Models\OrangSamaModel;
 use \App\Models\PindahPergiModel;
 use \App\Models\TidakMampuModel;
+use \App\Models\UsahaModel;
+use \App\Models\PengajuanModel;
 
 
 /**
@@ -64,5 +66,7 @@ class BaseController extends Controller
         $this->OrangSamaModel = new OrangSamaModel();
         $this->PindahPergiModel = new PindahPergiModel();
         $this->TidakMampuModel = new TidakMampuModel();
+        $this->UsahaModel = new UsahaModel();
+        $this->PengajuanModel = new PengajuanModel();
     }
 }

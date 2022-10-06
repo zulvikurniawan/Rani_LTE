@@ -122,6 +122,8 @@ class SKOrangSama extends BaseController
             'ktp' => $namaktp,
             'kk' => $namakk,
             'dokumen_bersangkutan' => $namadokumen_bersangkutan,
+            'status_pengajuan' => 'Pending',
+            'keterangan' => 'Pending'
 
         ]);
 

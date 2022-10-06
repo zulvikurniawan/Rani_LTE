@@ -109,7 +109,7 @@ header .container {
 
 .links a {
     color: var(--lightTwo);
-    margin-left: 4.5rem;
+    margin-left: 2.5rem;
     display: inline-block;
     transition: 0.3s;
     }
@@ -195,10 +195,10 @@ header .container {
 }
 
 .daftarMasyarakat {
-    display: block;
+    width: 80%;
     max-width: 80%;
-    align-items: center;
-    justify-content: center;
+    margin: auto;
+    margin-top: 50px;
 }
 
 .big-title {

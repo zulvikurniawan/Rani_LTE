@@ -120,7 +120,9 @@ class SKTidakMampu extends BaseController
             'spRT' => $namaspRT,
             'ktp' => $namaktp,
             'kk' => $namakk,
-            'rincian_biaya' => $namarincian_biaya
+            'rincian_biaya' => $namarincian_biaya,
+            'status_pengajuan' => 'Pending',
+            'keterangan' => 'Pending'
         ]);
 
         session()->setFlashdata('pesan', 'Data Berhasil Dikirim');

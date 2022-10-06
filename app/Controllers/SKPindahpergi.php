@@ -118,7 +118,9 @@ class SKPindahPergi extends BaseController
             'spRT' => $namaspRT,
             'ktp' => $namaktp,
             'kk' => $namakk,
-            'ijin_tinggal' => $namaijin_tinggal
+            'ijin_tinggal' => $namaijin_tinggal,
+            'status_pengajuan' => 'Pending',
+            'keterangan' => 'Pending'
         ]);
 
         session()->setFlashdata('pesan', 'Data Berhasil Dikirim');

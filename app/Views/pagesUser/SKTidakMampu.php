@@ -91,6 +91,15 @@
                         </div>
 
                         <div class="input-box">
+                            <span class="details">Tanggal Lahir</span>
+                            <input type="date" id="tanggal_Lahir" name="tanggal_Lahir" class="form-control
+                            <?= ($validation->hasError('tanggal_Lahir')) ? 'is-invalid' : ''; ?>" value="<?= old('tanggal_Lahir'); ?>">
+                            <div class="invalid-feedback">
+                                <?= $validation->getError('tanggal_Lahir'); ?>
+                            </div>
+                        </div>
+
+                        <div class="input-box">
                             <span class="details">NIK</span>
                             <input type="text" id="nik" name="nik" class="form-control
                             <?= ($validation->hasError('nik')) ? 'is-invalid' : ''; ?>" value="<?= old('nik'); ?>">

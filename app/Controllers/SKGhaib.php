@@ -114,7 +114,9 @@ class SKGhaib extends BaseController
             'jenis_kelamin' => $this->request->getVar('status'),
             'spRT' => $namaspRT,
             'ktp' => $namaktp,
-            'kk' => $namakk
+            'kk' => $namakk,
+            'status_pengajuan' => 'Pending',
+            'keterangan' => 'Pending'
         ]);
 
         session()->setFlashdata('pesan', 'Data Berhasil Dikirim');
