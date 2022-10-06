@@ -118,9 +118,9 @@
                                     <tr>
                                         <th scope="row"><?= $i++; ?></th>
                                         <td><?= $a['nama']; ?></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td><?= $a['pengajuan']; ?></td>
+                                        <td><?= $a['status_pengajuan']; ?></td>
+                                        <td><?= $a['keterangan']; ?></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

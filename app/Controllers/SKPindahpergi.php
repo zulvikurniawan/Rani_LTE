@@ -2,8 +2,11 @@
 
 namespace App\Controllers;
 
+use App\Models\PengajuanModel;
+
 class SKPindahPergi extends BaseController
 {
+    protected $PengajuanModel;
     public function index()
     {
         $data = [
@@ -106,6 +109,7 @@ class SKPindahPergi extends BaseController
         $fileijin_tinggal->move('file');
         $namaijin_tinggal = $fileijin_tinggal->getName();
 
+        $user = session()->get('user');
 
         $this->PindahPergiModel->save([
             'nik' => $this->request->getVar('nik'),
@@ -121,6 +125,17 @@ class SKPindahPergi extends BaseController
             'ijin_tinggal' => $namaijin_tinggal,
             'status_pengajuan' => 'Pending',
             'keterangan' => 'Pending'
+        ]);
+
+        $id = $this->PindahPergiModel->getInsertID();
+        $this->PengajuanModel->save([
+            'id_SKPindahPegi' => $id,
+            'id_account' => $user['id_account'],
+            'pengajuan' => 'Surat Keterangan Pindah Pergi',
+            'status_pengajuan' => 'Pending',
+            'keterangan' => 'Pending',
+            'nik_pengajuan' => $this->request->getVar('nik'),
+            'nama' => $this->request->getVar('nama_Lengkap')
         ]);
 
         session()->setFlashdata('pesan', 'Data Berhasil Dikirim');

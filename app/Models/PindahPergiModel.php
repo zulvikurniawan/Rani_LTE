@@ -14,7 +14,7 @@ class PindahPergiModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['nik', 'nama_Lengkap', 'no_kk', 'nama_kk', 'alamat_sekarang', 'alamat_pindah', 'jumlah_pindah', 'spRT', 'ktp', 'kk', 'ijin_tinggal', 'status_pengajuan'];
+    protected $allowedFields = ['nik', 'nama_Lengkap', 'no_kk', 'nama_kk', 'alamat_sekarang', 'alamat_pindah', 'jumlah_pindah', 'spRT', 'ktp', 'kk', 'ijin_tinggal', 'status_pengajuan', 'keterangan'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';

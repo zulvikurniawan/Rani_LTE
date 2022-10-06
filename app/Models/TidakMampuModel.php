@@ -14,7 +14,7 @@ class TidakMampuModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['nik', 'nama_Lengkap', 'tempat_Lahir', 'tanggal_Lahir', 'negara', 'pekerjaan', 'alamat', 'jenis_kelamin', 'agama', 'spRT', 'ktp', 'kk', 'rincian_biaya', 'status_pengajuan'];
+    protected $allowedFields = ['nik', 'nama_Lengkap', 'tempat_Lahir', 'tanggal_Lahir', 'negara', 'pekerjaan', 'alamat', 'jenis_kelamin', 'agama', 'spRT', 'ktp', 'kk', 'rincian_biaya', 'status_pengajuan', 'keterangan'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';

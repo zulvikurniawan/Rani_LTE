@@ -5,6 +5,7 @@ namespace App\Controllers;
 class SKTidakMampu extends BaseController
 {
     protected $TidakMampuModel;
+    protected $PengajuanModel;
 
     public function index()
     {
@@ -106,6 +107,7 @@ class SKTidakMampu extends BaseController
         $filerincian_biaya->move('file');
         $namarincian_biaya = $filerincian_biaya->getName();
 
+        $user = session()->get('user');
 
         $this->TidakMampuModel->save([
             'nama_Lengkap' => $this->request->getVar('nama_Lengkap'),
@@ -123,6 +125,17 @@ class SKTidakMampu extends BaseController
             'rincian_biaya' => $namarincian_biaya,
             'status_pengajuan' => 'Pending',
             'keterangan' => 'Pending'
+        ]);
+
+        $id = $this->TidakMampuModel->getInsertID();
+        $this->PengajuanModel->save([
+            'id_SKTidakMampu' => $id,
+            'id_account' => $user['id_account'],
+            'pengajuan' => 'Surat Keterangan Tidak Mampu',
+            'status_pengajuan' => 'Pending',
+            'keterangan' => 'Pending',
+            'nik_pengajuan' => $this->request->getVar('nik'),
+            'nama' => $this->request->getVar('nama_Lengkap')
         ]);
 
         session()->setFlashdata('pesan', 'Data Berhasil Dikirim');

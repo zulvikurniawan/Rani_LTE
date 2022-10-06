@@ -41,7 +41,6 @@
     <!-- bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-
     <!-- my css -->
     <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -54,7 +53,7 @@
     <?= $this->renderSection('content'); ?>
 
 
-    <footer class="main-footer"><strong>Program <a href="/Dashboard" style="text-decoration:none">Rakha</a></strong>
+    <footer class="main-footer"><strong>Program <a href="/DashboardAdmin" style="text-decoration:none">Kelurahan Buaran Indah</a></strong>
     </footer>
 
     <!-- Control Sidebar -->

@@ -77,8 +77,8 @@
 
                     </ul>
                 </li>
-                <li class="nav-item mb-3 <?= ($SidebarMenuOpen == 'masyarakat') ? 'menu-open' : '' ?>">
-                    <a href="" class="nav-link <?= ($SidebarMenuActive == 'masyarakat' || $SidebarMenuActive == 'approval' || $SidebarMenuActive == 'report') ? 'active' : '' ?>">
+                <li class="nav-item mb-3 <?= ($SidebarMenuOpen == 'pengajuan') ? 'menu-open' : '' ?>">
+                    <a href="" class="nav-link <?= ($SidebarMenuActive == 'pengajuan' || $SidebarMenuActive == 'approval' || $SidebarMenuActive == 'print') ? 'active' : '' ?>">
                         <i class="nav-icon fas fa-folder"></i>
                         <p>
                             Data Masyarakat
@@ -87,21 +87,15 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/Masyarakat" class="nav-link <?= ($SidebarMenuActive == 'masyarakat') ? 'active' : '' ?>">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Input</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/Masyarakat/approval" class="nav-link <?= ($SidebarMenuActive == 'approval') ? 'active' : '' ?>">
+                            <a href="/Pengajuan/approval" class="nav-link <?= ($SidebarMenuActive == 'approval') ? 'active' : '' ?>">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Approval</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/Masyarakat/report" class="nav-link <?= ($SidebarMenuActive == 'report') ? 'active' : '' ?>">
+                            <a href="/Pengajuan/print" class="nav-link <?= ($SidebarMenuActive == 'print') ? 'active' : '' ?>">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Report</p>
+                                <p>Print</p>
                             </a>
                         </li>
                     </ul>

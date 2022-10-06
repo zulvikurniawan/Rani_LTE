@@ -107,6 +107,8 @@ class SKOrangSama extends BaseController
         $filedokumen_bersangkutan->move('file');
         $namadokumen_bersangkutan = $filedokumen_bersangkutan->getName();
 
+        $user = session()->get('user');
+
         // dd($this->request->getFile('kk'));
         $this->OrangSamaModel->save([
             'nama_Lengkap' => $this->request->getVar('nama_Lengkap'),
@@ -124,7 +126,16 @@ class SKOrangSama extends BaseController
             'dokumen_bersangkutan' => $namadokumen_bersangkutan,
             'status_pengajuan' => 'Pending',
             'keterangan' => 'Pending'
-
+        ]);
+        $id = $this->OrangSamaModel->getInsertID();
+        $this->PengajuanModel->save([
+            'id_SKOrangSama' => $id,
+            'id_account' => $user['id_account'],
+            'pengajuan' => 'Surat Keterangan Orang yang Sama',
+            'status_pengajuan' => 'Pending',
+            'keterangan' => 'Pending',
+            'nik_pengajuan' => $this->request->getVar('nik'),
+            'nama' => $this->request->getVar('nama_Lengkap')
         ]);
 
         session()->setFlashdata('pesan', 'Data Berhasil Dikirim');

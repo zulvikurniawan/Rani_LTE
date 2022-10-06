@@ -142,27 +142,27 @@
                         </div>
                         <div class="group-listt">
                             <div class="form-check">
-                                <input type="radio" name="agama" class="form-check-input" required id="kristen">
+                                <input type="radio" name="agama" class="form-check-input" required id="kristen" value="kristen">
                                 <label for=" kristen" class="form-check-label">Kristen</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" name="agama" class="form-check-input" required id="katolik">
+                                <input type="radio" name="agama" class="form-check-input" required id="katolik" value="katolik">
                                 <label for="katolik" class="form-check-label">Katolik</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" name="agama" class="form-check-input" required id="islam">
+                                <input type="radio" name="agama" class="form-check-input" required id="islam" value="islam">
                                 <label for="islam" class="form-check-label">Islam</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" name="agama" class="form-check-input" required id="hindu">
+                                <input type="radio" name="agama" class="form-check-input" required id="hindu" value="hindu">
                                 <label for="hindu" class="form-check-label">Hindu</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" name="agama" class="form-check-input" required id="budha">
+                                <input type="radio" name="agama" class="form-check-input" required id="budha" value="budha">
                                 <label for="budha" class="form-check-label">Budha</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" name="agama" class="form-check-input" required id="konghucu">
+                                <input type="radio" name="agama" class="form-check-input" required id="konghucu" value="konghucu">
                                 <label for="konghucu" class="form-check-label">Konghucu</label>
                             </div>
                         </div>

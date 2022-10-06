@@ -12,7 +12,7 @@ use Psr\Log\LoggerInterface;
 //jika memakai BaseController namespase berada di sini
 use \App\Models\AccountModel;
 use \App\Models\JabatanModel;
-use \App\Models\ghaibModel;
+use \App\Models\GhaibModel;
 use \App\Models\OrangSamaModel;
 use \App\Models\PindahPergiModel;
 use \App\Models\TidakMampuModel;
@@ -62,7 +62,7 @@ class BaseController extends Controller
         session();
         $this->AccountModel = new AccountModel();
         $this->JabatanModel = new JabatanModel();
-        $this->ghaibModel = new ghaibModel();
+        $this->GhaibModel = new GhaibModel();
         $this->OrangSamaModel = new OrangSamaModel();
         $this->PindahPergiModel = new PindahPergiModel();
         $this->TidakMampuModel = new TidakMampuModel();

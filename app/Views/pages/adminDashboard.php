@@ -17,11 +17,11 @@
             <!-- small card -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h4>Laki - Laki Lansia</h4>
-                <h4></h4>
+                <h4>Tanggal</h4>
+                <h4><?php echo date("Y-m-d"); ?></h4>
               </div>
               <div class="icon">
-                <i class="fas fa-mars"></i>
+                <i class="fas fa-calendar-alt"></i>
               </div>
             </div>
           </div>
@@ -29,11 +29,11 @@
             <!-- small card -->
             <div class="small-box bg-warning text-white">
               <div class="inner">
-                <h4>Laki - Laki Dewasa</h4>
-                <h4></h4>
+                <h4>Jam</h4>
+                <h4><?php echo date("Y-m-d H:i:s"); ?></h4>
               </div>
               <div class="icon">
-                <i class="fas fa-mars"></i>
+                <i class="fas fa-clock"></i>
               </div>
             </div>
           </div>
@@ -41,63 +41,11 @@
             <!-- small card -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h4>Anak Laki - Laki</h4>
+                <h4>Total Pengajuan</h4>
                 <h4>44</h4>
               </div>
               <div class="icon">
-                <i class="fas fa-mars"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-around">
-          <div class="col-4">
-            <!-- small card -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h4>Perempuan Lansia</h4>
-                <h4></h4>
-              </div>
-              <div class="icon">
-                <i class="fas fa-venus"></i>
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <!-- small card -->
-            <div class="small-box bg-warning text-white">
-              <div class="inner">
-                <h4>Perempuan Dewasa</h4>
-                <h4></h4>
-              </div>
-              <div class="icon">
-                <i class="fas fa-venus"></i>
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <!-- small card -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h4>Anak Perempuan</h4>
-                <h4></h4>
-              </div>
-              <div class="icon">
-                <i class="fas fa-venus"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-around">
-          <div class="col-4">
-            <!-- small card -->
-            <div class="small-box bg-secondary">
-              <div class="inner">
-                <h4>Jumlah Penduduk</h4>
-                <h4></h4>
-              </div>
-              <div class="icon">
-                <i class="fas fa-users"></i>
+                <i class="fas fa-file"></i>
               </div>
             </div>
           </div>

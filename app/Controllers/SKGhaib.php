@@ -100,8 +100,9 @@ class SKGhaib extends BaseController
         $filekk->move('file');
         $namakk = $filekk->getName();
 
+        $user = session()->get('user');
 
-        $this->ghaibModel->save([
+        $this->GhaibModel->save([
             'nama_Lengkap' => $this->request->getVar('nama_Lengkap'),
             'tempat_Lahir' => $this->request->getVar('tempat_Lahir'),
             'tanggal_Lahir' => $this->request->getVar('tanggal_Lahir'),
@@ -117,6 +118,17 @@ class SKGhaib extends BaseController
             'kk' => $namakk,
             'status_pengajuan' => 'Pending',
             'keterangan' => 'Pending'
+        ]);
+
+        $id = $this->GhaibModel->getInsertID();
+        $this->PengajuanModel->save([
+            'id_SKGhaib' => $id,
+            'id_account' => $user['id_account'],
+            'pengajuan' => 'Surat Keterangan Ghaib',
+            'status_pengajuan' => 'Pending',
+            'keterangan' => 'Pending',
+            'nik_pengajuan' => $this->request->getVar('nik'),
+            'nama' => $this->request->getVar('nama_Lengkap')
         ]);
 
         session()->setFlashdata('pesan', 'Data Berhasil Dikirim');

@@ -20,9 +20,11 @@ class Dashboard extends BaseController
 
     public function pengajuan()
     {
+        $user = session()->get('user');
+        $id_account = $user['id_account'];
         $data = [
             'title' => 'Daftar Pengajuan | KELURAHAN BUARAN INDAH',
-            'pengajuan' => $this->PengajuanModel->getPengajuan(),
+            'pengajuan' => $this->PengajuanModel->getPengajuan($id_account),
         ];
 
         return view('pagesUser/dashboardUserPengajuan', $data);

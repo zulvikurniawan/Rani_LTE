@@ -5,6 +5,7 @@ namespace App\Controllers;
 class SKUsaha extends BaseController
 {
     protected $UsahaModel;
+    protected $PengajuanModel;
 
     public function index()
     {
@@ -106,6 +107,7 @@ class SKUsaha extends BaseController
         $filefotoUsaha->move('file');
         $namafotoUsaha = $filefotoUsaha->getName();
 
+        $user = session()->get('user');
 
         $this->UsahaModel->save([
             'nama_Lengkap' => $this->request->getVar('nama_Lengkap'),
@@ -123,6 +125,17 @@ class SKUsaha extends BaseController
             'fotoUsaha' => $namafotoUsaha,
             'status_pengajuan' => 'Pending',
             'keterangan' => 'Pending'
+        ]);
+
+        $id = $this->UsahaModel->getInsertID();
+        $this->PengajuanModel->save([
+            'id_SKUsaha' => $id,
+            'id_account' => $user['id_account'],
+            'pengajuan' => 'Surat Keterangan Usaha',
+            'status_pengajuan' => 'Pending',
+            'keterangan' => 'Pending',
+            'nik_pengajuan' => $this->request->getVar('nik'),
+            'nama' => $this->request->getVar('nama_Lengkap')
         ]);
 
         session()->setFlashdata('pesan', 'Data Berhasil Dikirim');

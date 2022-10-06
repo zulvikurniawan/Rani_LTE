@@ -14,7 +14,7 @@ class GhaibModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['nama_Lengkap', 'tempat_Lahir', 'tanggal_Lahir', 'nik', 'negara', 'pekerjaan', 'alamat', 'status', 'agama', 'jenis_kelamin',  'spRT', 'ktp', 'kk', 'status_pengajuan'];
+    protected $allowedFields = ['nama_Lengkap', 'tempat_Lahir', 'tanggal_Lahir', 'nik', 'negara', 'pekerjaan', 'alamat', 'status', 'agama', 'jenis_kelamin',  'spRT', 'ktp', 'kk', 'status_pengajuan', 'keterangan'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';
