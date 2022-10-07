@@ -8,6 +8,7 @@ class DashboardAdmin extends BaseController
 {
 
     protected $MasyarakatModel;
+    protected $PengajuanModel;
 
     public function index()
     {
@@ -15,7 +16,9 @@ class DashboardAdmin extends BaseController
             'title' => 'Dashboard | KELURAHAN BUARAN INDAH',
             'SidebarMenuOpen' => 'dashboard',
             'SidebarMenuActive' => 'dashboard',
+            'total' => $this->PengajuanModel->select('count(id_master_pengajuan) as total')->first()
         ];
+        // dd($data['total']);
         return view('pages/adminDashboard', $data);
     }
 

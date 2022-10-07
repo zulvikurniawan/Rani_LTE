@@ -42,7 +42,7 @@
             <div class="small-box bg-success">
               <div class="inner">
                 <h4>Total Pengajuan</h4>
-                <h4>44</h4>
+                <h4><?= $total['total']; ?></h4>
               </div>
               <div class="icon">
                 <i class="fas fa-file"></i>

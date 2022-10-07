@@ -1345,3 +1345,126 @@ CRITICAL - 2022-10-06 17:50:48 --> syntax error, unexpected 'H' (T_STRING), expe
 #6 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #7 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
 #8 {main}
+CRITICAL - 2022-10-06 18:46:53 --> Trying to access array offset on value of type null
+#0 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Controllers\Pengajuan.php(89): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\XIANGL...', 89, Array)
+#1 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(832): App\Controllers\Pengajuan->cetakSurat('3')
+#2 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengajuan))
+#3 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
+#6 {main}
+CRITICAL - 2022-10-06 18:48:22 --> syntax error, unexpected 'switch' (T_SWITCH)
+#0 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Pengajuan/print')
+#1 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Pengajuan/print')
+#2 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
+#6 {main}
+CRITICAL - 2022-10-06 18:48:26 --> syntax error, unexpected 'switch' (T_SWITCH)
+#0 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Pengajuan/cetak...')
+#1 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Pengajuan/cetak...')
+#2 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
+#6 {main}
+CRITICAL - 2022-10-06 18:48:33 --> syntax error, unexpected 'switch' (T_SWITCH)
+#0 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Pengajuan/cetak...')
+#1 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Pengajuan/cetak...')
+#2 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
+#6 {main}
+CRITICAL - 2022-10-06 18:48:42 --> syntax error, unexpected 'switch' (T_SWITCH)
+#0 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Pengajuan/cetak...')
+#1 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('Pengajuan/cetak...')
+#2 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
+#6 {main}
+CRITICAL - 2022-10-06 18:52:13 --> Invalid file: pages/suratPindahPergiCetak.php
+#0 C:\Users\XIANGLU\Desktop\Rani_LTE\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages/suratPind...')
+#1 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Common.php(1089): CodeIgniter\View\View->render('pages/suratPind...', Array, true)
+#2 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Controllers\Pengajuan.php(172): view('pages/suratPind...', Array)
+#3 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(832): App\Controllers\Pengajuan->cetakSurat('7')
+#4 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengajuan))
+#5 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
+#8 {main}
+CRITICAL - 2022-10-06 18:52:44 --> Invalid file: pages/suratOrangSamaCetak.php
+#0 C:\Users\XIANGLU\Desktop\Rani_LTE\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages/suratOran...')
+#1 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Common.php(1089): CodeIgniter\View\View->render('pages/suratOran...', Array, true)
+#2 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Controllers\Pengajuan.php(172): view('pages/suratOran...', Array)
+#3 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(832): App\Controllers\Pengajuan->cetakSurat('9')
+#4 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengajuan))
+#5 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
+#8 {main}
+ERROR - 2022-10-06 18:57:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+FROM `master_pengajuan`
+ LIMIT 1' at line 1
+CRITICAL - 2022-10-06 18:57:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+FROM `master_pengajuan`
+ LIMIT 1' at line 1
+#0 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT count(id...', 0)
+#1 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT count(id...')
+#2 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT count(id...')
+#3 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT count(id...', Array, false)
+#4 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\XIANGLU\Desktop\Rani_LTE\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Controllers\DashboardAdmin.php(19): CodeIgniter\BaseModel->first()
+#7 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(832): App\Controllers\DashboardAdmin->index()
+#8 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardAdmin))
+#9 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
+#12 {main}
+CRITICAL - 2022-10-06 22:29:21 --> Illegal string offset 'nama_Lengkap'
+#0 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Views\pages\suratGhaib.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\Users\\XIANGL...', 44, Array)
+#1 C:\Users\XIANGLU\Desktop\Rani_LTE\system\View\View.php(210): include('C:\\Users\\XIANGL...')
+#2 C:\Users\XIANGLU\Desktop\Rani_LTE\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Common.php(1089): CodeIgniter\View\View->render('pages/suratGhai...', Array, true)
+#4 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Controllers\Pengajuan.php(125): view('pages/suratGhai...', Array)
+#5 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(832): App\Controllers\Pengajuan->cetak('1')
+#6 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengajuan))
+#7 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
+#10 {main}
+ERROR - 2022-10-06 22:30:13 --> Column 'id_SKGhaib' in where clause is ambiguous
+CRITICAL - 2022-10-06 22:30:13 --> Column 'id_SKGhaib' in where clause is ambiguous
+#0 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `master_...', 0)
+#1 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `master_...')
+#2 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `master_...')
+#3 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `master_...', Array, false)
+#4 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\XIANGLU\Desktop\Rani_LTE\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Models\PengajuanModel.php(56): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Controllers\Pengajuan.php(113): App\Models\PengajuanModel->getSuratGhaib('7')
+#8 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(832): App\Controllers\Pengajuan->cetak('1')
+#9 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengajuan))
+#10 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
+#13 {main}
+ERROR - 2022-10-06 22:30:20 --> Column 'id_SKGhaib' in where clause is ambiguous
+CRITICAL - 2022-10-06 22:30:20 --> Column 'id_SKGhaib' in where clause is ambiguous
+#0 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `master_...', 0)
+#1 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `master_...')
+#2 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `master_...')
+#3 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `master_...', Array, false)
+#4 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\XIANGLU\Desktop\Rani_LTE\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Models\PengajuanModel.php(56): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Controllers\Pengajuan.php(113): App\Models\PengajuanModel->getSuratGhaib('7')
+#8 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(832): App\Controllers\Pengajuan->cetak('1')
+#9 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengajuan))
+#10 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
+#13 {main}

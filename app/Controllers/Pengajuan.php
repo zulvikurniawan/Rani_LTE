@@ -86,6 +86,7 @@ class Pengajuan extends BaseController
         $pengajuanDetail = [];
         $view = '';
 
+        // dd($pengajuan);
         switch ($pengajuan['pengajuan']) {
             case 'Surat Keterangan Usaha':
                 $pengajuanDetail = $this->UsahaModel->find($pengajuan['id_SKUsaha']);
@@ -111,6 +112,53 @@ class Pengajuan extends BaseController
                 $pengajuanDetail = $this->GhaibModel->find($pengajuan['id_SKGhaib']);
                 $detailSurat = $this->PengajuanModel->getSuratGhaib($pengajuan['id_SKGhaib']);
                 $view = 'suratGhaib';
+                break;
+        }
+        $data = [
+            'title' => 'Pengajuan | KELURAHAN BUARAN INDAH',
+            'SidebarMenuOpen' => 'pengajuan',
+            'SidebarMenuActive' => 'print',
+            'pengajuan' => $pengajuan,
+            'pengajuanDetail' => $pengajuanDetail,
+            'detailSurat' => $detailSurat
+        ];
+        return view('pages/' . $view, $data);
+    }
+
+    public function cetakSurat($id)
+    {
+
+        $pengajuan = $this->PengajuanModel->find($id);
+
+        $pengajuanDetail = [];
+        $view = '';
+
+        // dd($pengajuan);
+        switch ($pengajuan['pengajuan']) {
+            case 'Surat Keterangan Usaha':
+                $pengajuanDetail = $this->UsahaModel->find($pengajuan['id_SKUsaha']);
+                $detailSurat = $this->PengajuanModel->getSuratUsaha($pengajuan['id_SKUsaha']);
+                $view = 'suratUsahaCetak';
+                break;
+            case 'Surat Keterangan Tidak Mampu':
+                $pengajuanDetail = $this->TidakMampuModel->find($pengajuan['id_SKTidakMampu']);
+                $detailSurat = $this->PengajuanModel->getSuratTidakMampu($pengajuan['id_SKTidakMampu']);
+                $view = 'suratTidakMampuCetak';
+                break;
+            case 'Surat Keterangan Pindah Pergi':
+                $pengajuanDetail = $this->PindahPergiModel->find($pengajuan['id_SKPindahPergi']);
+                $detailSurat = $this->PengajuanModel->getSuratPindahPergi($pengajuan['id_SKPindahPergi']);
+                $view = 'suratPindahPergiCetak';
+                break;
+            case 'Surat Keterangan Orang yang Sama':
+                $pengajuanDetail = $this->OrangSamaModel->find($pengajuan['id_SKOrangSama']);
+                $detailSurat = $this->PengajuanModel->getSuratOrangSama($pengajuan['id_SKOrangSama']);
+                $view = 'suratOrangSamaCetak';
+                break;
+            case 'Surat Keterangan Ghaib':
+                $pengajuanDetail = $this->GhaibModel->find($pengajuan['id_SKGhaib']);
+                $detailSurat = $this->PengajuanModel->getSuratGhaib($pengajuan['id_SKGhaib']);
+                $view = 'suratGhaibCetak';
                 break;
         }
         $data = [

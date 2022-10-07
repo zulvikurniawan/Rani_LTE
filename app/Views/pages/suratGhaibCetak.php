@@ -53,7 +53,6 @@
         <!-- Main content -->
         <section class="content">
             <div class="form">
-                <a href="/Pengajuan/cetakSurat" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-print"></i> Print</a>
                 <div class="kop">
                     <table>
                         <tr>
@@ -68,76 +67,79 @@
                     </table>
                     <hr color="black">
                 </div>
-                <div class="lampiran" align="center">
-                    <h6>SURAT KETERANGAN GHAIB
-                        <hr style="font-weight: bold; width: 200px;">
-                    </h6>
-                    <h8>Nomor : 503/ /-Ekbang/2022</h8>
-                </div>
+                <?php foreach ($detailSurat as $a) : ?>
+                    <div class="lampiran" align="center">
+                        <h6>SURAT KETERANGAN GHAIB
+                            <hr style="font-weight: bold; width: 200px;">
+                        </h6>
+                        <h8>Nomor : 503/-Ekbang/2022</h8>
+                    </div>
 
-                <div class="pembuka">
-                    <p>Lurah Buaran Indah Kecamatan Tangerang Kota Tangerang dengan ini menerangkan bahwa :</p>
-                </div>
+                    <div class="pembuka">
+                        <p>Lurah Buaran Indah Kecamatan Tangerang Kota Tangerang dengan ini menerangkan bahwa :</p>
+                    </div>
 
-                <div class="bio">
-                    <table>
-                        <tr>
-                            <td style="width: 130px;">Nama</td>
-                            <td style="width: 10px;">:</td>
-                            <td style="font-weight: bold;">Rany</td>
-                        </tr>
-                        <tr>
-                            <td style="width: 130px;">Jenis Kelamin</td>
-                            <td style="width: 10px;">:</td>
-                            <td>Perempuan</td>
-                        </tr>
-                        <tr>
-                            <td style="width: 130px;">Tempat/Tgl. Lahir</td>
-                            <td style="width: 10px;">:</td>
-                            <td>Karawaci/ 1 January 1999</td>
-                        </tr>
-                        <tr>
-                            <td style="width: 130px;">Bangsa/Agama</td>
-                            <td style="width: 10px;">:</td>
-                            <td>Indonesia/katolik</td>
-                        </tr>
-                        <tr>
-                            <td style="width: 130px;">Status</td>
-                            <td style="width: 10px;">:</td>
-                            <td>Menikah</td>
-                        </tr>
-                        <tr>
-                            <td style="width: 130px;">Pekerjaan</td>
-                            <td style="width: 10px;">:</td>
-                            <td>Wirausaha</td>
-                        </tr>
-                        <tr>
-                            <td style="width: 130px;">Alamat</td>
-                            <td style="width: 10px;">:</td>
-                            <td>Cimone</td>
-                        </tr>
-                    </table>
-                </div>
+                    <div class="bio">
+                        <table>
+                            <tr>
+                                <td style="width: 130px;">Nama</td>
+                                <td style="width: 10px;">:</td>
+                                <td style="font-weight: bold;"><?= $a['nama_Lengkap']; ?></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 130px;">Jenis Kelamin</td>
+                                <td style="width: 10px;">:</td>
+                                <td><?= $a['jenis_kelamin']; ?></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 130px;">Tempat/Tgl. Lahir</td>
+                                <td style="width: 10px;">:</td>
+                                <td><?= $a['tempat_Lahir']; ?>/ <?= $a['tanggal_Lahir']; ?></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 130px;">Bangsa/Agama</td>
+                                <td style="width: 10px;">:</td>
+                                <td><?= $a['negara']; ?>/<?= $a['agama']; ?></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 130px;">Status</td>
+                                <td style="width: 10px;">:</td>
+                                <td><?= $a['status']; ?></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 130px;">Pekerjaan</td>
+                                <td style="width: 10px;">:</td>
+                                <td><?= $a['pekerjaan']; ?></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 130px;">Alamat</td>
+                                <td style="width: 10px;">:</td>
+                                <td><?= $a['alamat']; ?></td>
+                            </tr>
+                        </table>
+                    </div>
 
-                <div class="penutup">
-                    <p>Berdasarkan Pengantar Ketua RT/RW tanggal 07 desember 2021 dan surat pernyataan dari ANIK SUSANTI (istri) benar benar nama tersebut diatas adalah warga kami yang telah meninggalkan rumah sejak Bulan Desember Tahun 2009 sampai dengan sekarang.
-                        <br>
-                        <br>
-                        Demikian surat keterangan ini dibuat untuk dipergunakan seperlunya.
-                    </p>
-                </div>
+                    <div class="penutup">
+                        <p>Berdasarkan Pengantar Ketua RT/RW tanggal <?php echo date("d /m /y"); ?> nama diatas adalah warga kami yang telah meninggalkan rumah sejak Bulan Desember Tahun 2009 sampai dengan sekarang.</p>
+                        <p>
+                            Demikian surat keterangan ini dibuat untuk dipergunakan seperlunya.
+                        </p>
+                    </div>
 
-                <div class="paraf">
-                    <table>
-                        <tr>
-                            <td style="width: 380px;"></td>
-                            <td align="center">Tangerang, 01 Januari 2100 <br>An. Lurah Buaran Indah <br>Sekretaris <br><br><br>MURHAINI,SE <br>NIP.197505202010012006</td>
-                        </tr>
-                    </table>
-                </div>
+                    <div class="paraf">
+                        <table>
+                            <tr>
+                                <td style="width: 380px;"></td>
+                                <td align="center">Tangerang, <?php echo date("d /m /y"); ?> <br>An. Lurah Buaran Indah <br>Sekretaris <br><br><br>MURHAINI,SE <br>NIP.197505202010012006</td>
+                            </tr>
+                        </table>
+                    <?php endforeach; ?>
+                    </div>
             </div>
         </section>
         <!-- /.content -->
+
+
     </div>
     <!-- /.content-wrapper -->
 

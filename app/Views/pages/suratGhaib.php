@@ -8,7 +8,7 @@
     <section class="content">
         <div class="form">
 
-            <a href="/Pengajuan/cetakSurat/<?= $pengajuanDetail['id_SKGhaib']; ?>" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-print"></i> Print</a>
+            <a href="/Pengajuan/cetakSurat/<?= $pengajuan['id_master_pengajuan']; ?>" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-print"></i> Print</a>
 
             <div class="kop">
                 <table>
