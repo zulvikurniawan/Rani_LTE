@@ -1,0 +1,12 @@
+CRITICAL - 2022-10-07 00:24:23 --> Undefined variable: detailSurat
+#0 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Views\pages\suratGhaibCetak.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\XIANGL...', 70, Array)
+#1 C:\Users\XIANGLU\Desktop\Rani_LTE\system\View\View.php(210): include('C:\\Users\\XIANGL...')
+#2 C:\Users\XIANGLU\Desktop\Rani_LTE\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Common.php(1089): CodeIgniter\View\View->render('pages/suratGhai...', Array, true)
+#4 C:\Users\XIANGLU\Desktop\Rani_LTE\app\Controllers\Pengajuan.php(167): view('pages/suratGhai...', Array)
+#5 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(832): App\Controllers\Pengajuan->cetakSurat('1')
+#6 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengajuan))
+#7 C:\Users\XIANGLU\Desktop\Rani_LTE\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\XIANGLU\Desktop\Rani_LTE\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\XIANGLU\Desktop\Rani_LTE\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\XIANGL...')
+#10 {main}
